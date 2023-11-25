@@ -8,7 +8,7 @@ WORKDIR /app
 COPY ./requirements.txt /app/requirements.txt
 
 # 安装依赖
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -i https://mirrors.aliyun.com/pypi/simple/ -r requirements.txt
 
 # 复制后端代码到容器的 /app
 COPY . /app
