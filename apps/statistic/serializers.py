@@ -6,7 +6,7 @@ from apps.sales.models import *
 from apps.finance.models import *
 
 
-class PurchaseReportDetialSerializer(BaseSerializer):
+class PurchaseReportdetailSerializer(BaseSerializer):
     """采购明细"""
 
     goods_number = CharField(source='goods.number', read_only=True, label='产品编号')
@@ -31,7 +31,7 @@ class PurchaseReportDetialSerializer(BaseSerializer):
                   'supplier_number', 'supplier_name', 'creator_name', 'create_time']
 
 
-class SalesReportDetialSerializer(BaseSerializer):
+class SalesReportdetailSerializer(BaseSerializer):
     """销售明细"""
 
     goods_number = CharField(source='goods.number', read_only=True, label='产品编号')
@@ -56,7 +56,7 @@ class SalesReportDetialSerializer(BaseSerializer):
                   'client_number', 'client_name', 'creator_name', 'create_time']
 
 
-class PaymentOrderDetialSerializer(BaseSerializer):
+class PaymentOrderdetailSerializer(BaseSerializer):
     """付款明细"""
 
     supplier_number = CharField(source='supplier.number', read_only=True, label='供应商编号')
@@ -68,7 +68,7 @@ class PaymentOrderDetialSerializer(BaseSerializer):
                   'total_amount', 'create_time']
 
 
-class CollectionOrderDetialSerializer(BaseSerializer):
+class CollectionOrderdetailSerializer(BaseSerializer):
     """收款单据"""
 
     client_number = CharField(source='client.number', read_only=True, label='客户编号')
@@ -80,7 +80,7 @@ class CollectionOrderDetialSerializer(BaseSerializer):
                   'total_amount', 'create_time']
 
 
-class IncomeChargeOrderDetialSerializer(BaseSerializer):
+class IncomeChargeOrderdetailSerializer(BaseSerializer):
     """收入费用明细"""
 
     supplier_number = CharField(source='supplier.number', read_only=True, label='供应商编号')
@@ -95,7 +95,7 @@ class IncomeChargeOrderDetialSerializer(BaseSerializer):
                   'charge_amount', 'create_time']
 
 
-class ExpenditureChargeOrderDetialSerializer(BaseSerializer):
+class ExpenditureChargeOrderdetailSerializer(BaseSerializer):
     """支出费用明细"""
 
     supplier_number = CharField(source='supplier.number', read_only=True, label='供应商编号')
@@ -110,7 +110,7 @@ class ExpenditureChargeOrderDetialSerializer(BaseSerializer):
                   'charge_amount', 'create_time']
 
 
-class PurchasePaymentDetialSerializer(BaseSerializer):
+class PurchasePaymentdetailSerializer(BaseSerializer):
     """采购付款明细"""
 
     supplier_number = CharField(source='supplier.number', read_only=True, label='供应商编号')
@@ -122,7 +122,7 @@ class PurchasePaymentDetialSerializer(BaseSerializer):
                   'payment_amount', 'create_time']
 
 
-class PurchaseReturnCollectionDetialSerializer(BaseSerializer):
+class PurchaseReturnCollectiondetailSerializer(BaseSerializer):
     """采购退货收款明细"""
 
     supplier_number = CharField(source='supplier.number', read_only=True, label='供应商编号')
@@ -134,7 +134,7 @@ class PurchaseReturnCollectionDetialSerializer(BaseSerializer):
                   'collection_amount', 'create_time']
 
 
-class SalesCollectionDetialSerializer(BaseSerializer):
+class SalesCollectiondetailSerializer(BaseSerializer):
     """销售收款明细"""
 
     client_number = CharField(source='client.number', read_only=True, label='客户编号')
@@ -146,7 +146,7 @@ class SalesCollectionDetialSerializer(BaseSerializer):
                   'collection_amount', 'create_time']
 
 
-class SalesReturnPaymentDetialSerializer(BaseSerializer):
+class SalesReturnPaymentdetailSerializer(BaseSerializer):
     """销售退货付款明细"""
 
     client_number = CharField(source='client.number', read_only=True, label='客户编号')
@@ -159,9 +159,9 @@ class SalesReturnPaymentDetialSerializer(BaseSerializer):
 
 
 __all__ = [
-    'PurchaseReportDetialSerializer', 'SalesReportDetialSerializer',
-    'PaymentOrderDetialSerializer', 'CollectionOrderDetialSerializer',
-    'IncomeChargeOrderDetialSerializer', 'ExpenditureChargeOrderDetialSerializer',
-    'PurchasePaymentDetialSerializer', 'PurchaseReturnCollectionDetialSerializer',
-    'SalesCollectionDetialSerializer', 'SalesReturnPaymentDetialSerializer',
+    'PurchaseReportdetailSerializer', 'SalesReportdetailSerializer',
+    'PaymentOrderdetailSerializer', 'CollectionOrderdetailSerializer',
+    'IncomeChargeOrderdetailSerializer', 'ExpenditureChargeOrderdetailSerializer',
+    'PurchasePaymentdetailSerializer', 'PurchaseReturnCollectiondetailSerializer',
+    'SalesCollectiondetailSerializer', 'SalesReturnPaymentdetailSerializer',
 ]

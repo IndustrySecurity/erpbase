@@ -15,7 +15,7 @@
                  @change="tableChange">
           <div slot="action" slot-scope="value, item">
             <a-button-group size="small">
-              <a-button size="small" @click="detial(item)">详情</a-button>
+              <a-button size="small" @click="detail(item)">详情</a-button>
               <a-popconfirm title="确定作废吗" @confirm="voidItem(item)">
                 <a-button type="danger" icon="delete" size="small">作废</a-button>
               </a-popconfirm>
@@ -132,7 +132,7 @@ export default {
       this.pagination.current = 1;
       this.list();
     },
-    detial(item) {
+    detail(item) {
       this.$router.push({ path: '/sale/sale_record_detail', query: { id: item.id } });
     },
     voidItem(item) {

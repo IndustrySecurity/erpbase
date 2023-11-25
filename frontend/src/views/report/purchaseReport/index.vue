@@ -56,7 +56,7 @@
 </template>
 
 <script>
-  import { purchaseReportStatistics, purchaseReportDetialsList, purchaseReportByGoodsList } from '@/api/report'
+  import { purchaseReportStatistics, purchaseReportdetailsList, purchaseReportByGoodsList } from '@/api/report'
   import { goodsClassificationOption } from '@/api/option'
   import NP from 'number-precision'
   import moment from 'moment'
@@ -133,7 +133,7 @@
         })
 
         if (this.currentTab === 'flow') {
-          purchaseReportDetialsList(form).then(resp => {
+          purchaseReportdetailsList(form).then(resp => {
             this.items = resp.results;
             this.pagination.total = resp.count;
 

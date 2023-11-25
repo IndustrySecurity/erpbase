@@ -14,7 +14,7 @@
         @change="tableChange">
         <div slot="action" slot-scope="value, item">
           <a-button-group size="small">
-            <a-button size="small" @click="detial(item)">详情</a-button>
+            <a-button size="small" @click="detail(item)">详情</a-button>
             <a-popconfirm v-if="item.is_completed" title="确定作废吗?" @confirm="voidItem(item)">
               <a-button type="danger" :disabled="item.is_void">{{ item.is_void ? '已作废' : '作废'}}</a-button>
             </a-popconfirm>
@@ -113,7 +113,7 @@
       toStockIn(item) {
         this.$router.push({ path: '/warehouse/outStock_create', query: { id: item.id } });
       },
-      detial(item) {
+      detail(item) {
         this.$router.push({ path: '/warehouse/outStock_record_detail', query: { id: item.id } });
       },
       voidItem(item) {

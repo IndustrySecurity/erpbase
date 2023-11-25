@@ -15,7 +15,7 @@
           @change="tableChange">
           <div slot="action" slot-scope="value, item">
             <a-button-group size="small">
-              <a-button size="small" @click="detial(item)">详情</a-button>
+              <a-button size="small" @click="detail(item)">详情</a-button>
             </a-button-group>
           </div>
         </a-table>
@@ -133,7 +133,7 @@
         this.pagination.current = 1;
         this.list();
       },
-      detial(item) {
+      detail(item) {
         this.$router.push({ path: '/purchasing/return_record_detail', query: { id: item.id } });
       },
     },

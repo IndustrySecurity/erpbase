@@ -46,7 +46,7 @@
             :data-source="info.stock_check_goods_Items"
             :pagination="false">
             <div slot="batch" slot-scope="value, item">
-              <a-button v-if="item.enable_batch_control" type="primary" size="small" @click="batchDetial(item)">查看批次</a-button>
+              <a-button v-if="item.enable_batch_control" type="primary" size="small" @click="batchdetail(item)">查看批次</a-button>
             </div>
           </a-table>
         </a-spin>
@@ -215,7 +215,7 @@
           this.loading = false;
         });
       },
-      batchDetial(item,) {
+      batchdetail(item,) {
         console.log(item,)
         this.batchTitle = '管理批次';
         this.stockCheckBatchItems = item.stock_check_batch_items;

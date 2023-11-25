@@ -14,7 +14,7 @@
         @change="tableChange">
         <div slot="action" slot-scope="value, item">
           <a-button-group size="small">
-            <a-button size="small" @click="detial(item)">详情</a-button>
+            <a-button size="small" @click="detail(item)">详情</a-button>
             <a-button type="primary" size="small" :disabled="item.is_completed" @click="toStockIn(item)">出库</a-button>
           </a-button-group>
         </div>
@@ -118,7 +118,7 @@
       toStockIn(item) {
         this.$router.push({ path: '/warehouse/outStock_create', query: { id: item.id } });
       },
-      detial(item) {
+      detail(item) {
         this.$router.push({ path: '/warehouse/outStock_detail', query: { id: item.id } });
       },
       voidItem(item) {

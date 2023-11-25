@@ -10,9 +10,9 @@ export default {
       component: () => import('@/views/production/productionPlan/index'),
     },
     {
-      path: 'detial',
+      path: 'detail',
       meta: { title: '生产计划详情' },
-      component: () => import('@/views/production/productionDetial/index'),
+      component: () => import('@/views/production/productionDetail/index'),
     },
     {
       path: 'task',

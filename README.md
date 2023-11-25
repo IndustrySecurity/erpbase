@@ -47,7 +47,7 @@ python manage.py runserver
     CREATE DATABASE erp_db;
 3. configs/django.py里修改password,user,host，port（你的ip）字段
 4. 迁移数据库
-    * python manage.py makemigrations
+    * ython manage.py makemigrations
     * python manage.py migrate
 5. 创建管理员用户（编号请输入为2）
     * python manage.py runscript create_user

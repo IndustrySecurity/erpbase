@@ -68,4 +68,11 @@ export default [
       { key: '/config', name: '系统配置' },
     ]
   },
+  {
+    key: '10', name: '生产管理', icon: 'tool', submenus: [
+      { key: '/production/plan', name: '生产计划' },
+      { key: '/production/task', name: '生产任务' },
+      { key: '/production/record', name: '生产记录' },
+    ]
+  },
 ]

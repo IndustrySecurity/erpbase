@@ -24,7 +24,7 @@
         >
           <div slot="action" slot-scope="value, item, index">
             <a-button-group size="small">
-              <a-button @click="detial()">详情</a-button>
+              <a-button @click="detail()">详情</a-button>
               <a-button type="primary" @click="openCreateModal(item)">生产</a-button>
             </a-button-group>
           </div>
@@ -126,8 +126,8 @@ export default {
     create() {
       this.list();
     },
-    detial(item) {
-      this.$router.push({ path: "/production/detial", query: { id: item.id } });
+    detail(item) {
+      this.$router.push({ path: "/production/detail", query: { id: item.id } });
     },
     search() {
       this.searchForm.page = 1;

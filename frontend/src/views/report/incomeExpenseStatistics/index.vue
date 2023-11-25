@@ -34,7 +34,7 @@
                         :loading="collection.loading" :pagination="collection.pagination" @change="collection_tableChange">
                         <div slot="action" slot-scope="value, item">
                             <a-button-group size="small">
-                                <a-button size="small" @click="collection_detial(item)">详情</a-button>
+                                <a-button size="small" @click="collection_detail(item)">详情</a-button>
                                 <a-popconfirm title="确定作废吗?" @confirm="collection_voidItem(item)">
                                     <a-button type="danger" :disabled="item.is_void">{{ item.is_void ? '已作废' : '作废'
                                     }}</a-button>
@@ -53,7 +53,7 @@
                     :loading="payment.loading" :pagination="payment.pagination" @change="payment_tableChange">
                     <div slot="action" slot-scope="value, item">
                         <a-button-group size="small">
-                            <a-button size="small" @click="payment_detial(item)">详情</a-button>
+                            <a-button size="small" @click="payment_detail(item)">详情</a-button>
                             <a-popconfirm title="确定作废吗?" @confirm="payment_payment_voidItem(item)">
                                 <a-button type="danger" :disabled="item.is_void">{{ item.is_void ? '已作废' : '作废'
                                 }}</a-button>
@@ -253,7 +253,7 @@ export default {
         collection_handelAdd(item) {
             this.$router.push({ path: '/finance/collection_create' });
         },
-        collection_detial(item) {
+        collection_detail(item) {
             this.$router.push({ path: '/finance/collection_detail', query: { id: item.id } });
         },
         collection_voidItem(item) {
@@ -293,7 +293,7 @@ export default {
         payment_handelAdd(item) {
             this.$router.push({ path: '/finance/payment_create' });
         },
-        payment_detial(item) {
+        payment_detail(item) {
             this.$router.push({ path: '/finance/payment_detail', query: { id: item.id } });
         },
         payment_voidItem(item) {

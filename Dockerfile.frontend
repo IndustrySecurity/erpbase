@@ -1,0 +1,25 @@
+# 基于 Node 官方镜像
+FROM node:16
+
+# 工作目录设置为 /app
+WORKDIR /app
+
+# 复制 package.json 和 yarn.lock 到容器的 /app
+COPY ./frontend/package.json ./frontend/yarn.lock /app/
+
+COPY ./frontend/src /app/src
+
+# 安装依赖
+RUN yarn install
+
+# 复制前端代码到容器的 /app
+COPY ./frontend /app
+
+# 构建应用
+RUN yarn build
+
+# 暴露端口
+EXPOSE 8080
+
+# 运行 Vue 应用
+CMD ["yarn", "serve"]
