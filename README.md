@@ -126,6 +126,7 @@ server
     #PHP-INFO-START  PHP引用配置，可以注释或修改
     include enable-php-73.conf;
     #PHP-INFO-END
+    container_name: erp_backend
 
     #REWRITE-START URL重写规则引用,修改后将导致面板设置的伪静态规则失效
     include /www/server/panel/vhost/rewrite/erp.tanfuhua.com.conf;

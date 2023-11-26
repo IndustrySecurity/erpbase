@@ -16,6 +16,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.frontend
+    container_name: erp_frontend
     ports:
       - "8080:8080"
     volumes:
@@ -33,6 +34,16 @@ services:
     volumes:
       - db-data:/var/lib/postgresql/data
 
+  nginx:
+    image: nginx:latest
+    container_name: erp_nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    depends_on:
+      - backend
+      - frontend
 
 volumes:
   db-data:
